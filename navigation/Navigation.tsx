@@ -4,9 +4,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/HomeScreen";
 import DetailScreen from "../screens/DetailScreen";
 
-const Stack = createNativeStackNavigator();
+type RootStackParam = {
+  Home: undefined;
+  Detail: undefined;
+}
 
-const Navigation = () => {
+const Stack = createNativeStackNavigator<RootStackParam>();
+
+const Navigation: React.FC= () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
