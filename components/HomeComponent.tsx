@@ -1,28 +1,31 @@
 import React from "react";
-import { View, TextInput, FlatList, ActivityIndicator, Text, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  ActivityIndicator,
+  TextInput,
+} from "react-native";
 import { useHomeController } from "../controller/HomeController";
 import { styles } from "../constants/HomeStyles";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-type RootStackParam = {
-  Home: undefined;
-  Detail: { pokemonUrl: string };
-};
+interface HomeScreenProps {
+  navigation: any;  // Replace 'any' with a more specific type if available
+}
 
-type HomeScreenProps = NativeStackScreenProps<RootStackParam, "Home">;
-
-const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
+const HomeComponent: React.FC<HomeScreenProps> = ({ navigation }) => {
   const {
-    pokemonList,
     filteredPokemonList,
     loading,
     loadingMore,
     searchQuery,
-    handleSearch,
     handleLoadMore,
+    handleSearch,
   } = useHomeController();
 
-  const renderItem = ({ item }: { item: { id: number; name: string; imageUrl: string; url: string } }) => (
+  const renderItem = ({ item }: { item: any }) => (
     <TouchableOpacity
       style={styles.item}
       onPress={() => navigation.navigate("Detail", { pokemonUrl: item.url })}
@@ -65,4 +68,4 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
   );
 };
 
-export default HomeScreen;
+export default HomeComponent;

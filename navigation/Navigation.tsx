@@ -2,16 +2,16 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/HomeScreen";
-import DetailScreen from "../screens/DetailScreen";
+import DetailsScreen from "../screens/DetailScreen";
 
 type RootStackParam = {
   Home: undefined;
-  Detail: undefined;
-}
+  Detail: { pokemonUrl: string };
+};
 
 const Stack = createNativeStackNavigator<RootStackParam>();
 
-const Navigation: React.FC= () => {
+const Navigation: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -27,7 +27,7 @@ const Navigation: React.FC= () => {
         />
         <Stack.Screen
           name="Detail"
-          component={DetailScreen}
+          component={DetailsScreen}
           options={{
             title: "Pokemon Details",
             headerStyle: { backgroundColor: "black" },
