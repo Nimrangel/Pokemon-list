@@ -13,7 +13,25 @@ defineFeature(feature, (test) => {
       wrapper = shallow(<HomeScreen />);
     });
 
-    when("User fully loaded Pokémon home page", () => {});
+    when("User fully loaded Pokémon home page", () => {
+      const mockPokemonList = [
+        {
+          id: 1,
+          name: "Bulbasaur",
+          imageUrl: "bulbasaur.png",
+          url: "/bulbasaur",
+        },
+        { id: 2, name: "Ivysaur", imageUrl: "ivysaur.png", url: "/ivysaur" },
+      ];
+
+      wrapper.setState({
+        loading: false,
+        pokemonList: mockPokemonList,
+        filteredPokemonList: mockPokemonList,
+      });
+
+      wrapper.update();
+    });
 
     then("User should see home page", () => {
       expect(
