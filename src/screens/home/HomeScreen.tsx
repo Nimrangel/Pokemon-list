@@ -1,7 +1,7 @@
 import React from "react";
 import { View, TextInput, FlatList, ActivityIndicator, Text, TouchableOpacity, Image } from "react-native";
-import { useHomeController } from "../controller/HomeController";
-import { styles } from "../constants/HomeStyles";
+import { useHomeController } from "../../controller/HomeController";
+import { styles } from "../../constants/HomeStyles";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 type RootStackParam = {

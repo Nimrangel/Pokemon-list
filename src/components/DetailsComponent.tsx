@@ -4,7 +4,7 @@ import { useDetailsController } from "../controller/DetailsController";
 import { styles } from "../constants/DetailsStyles";
 
 import { RouteProp } from "@react-navigation/native";
-import { RootStackParam } from "../screens/DetailScreen";
+import { RootStackParam } from "src/screens/details/DetailScreen";
 
 type DetailsComponentProps = {
   route: RouteProp<RootStackParam, "Detail">;
