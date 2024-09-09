@@ -4,7 +4,6 @@
     "slug": "cognith-pokeapi-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "sdkVersion": "44.0.0",
     "userInterfaceStyle": "light",
     "splash": {
       "resizeMode": "contain",

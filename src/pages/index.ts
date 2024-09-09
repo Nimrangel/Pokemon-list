@@ -1,3 +1,3 @@
-import ComponentHome from "./BoilerplatePages/HomeScreen";
+import ComponentHome from "./BoilerplatePages/ComponentView";
 
 export { ComponentHome };

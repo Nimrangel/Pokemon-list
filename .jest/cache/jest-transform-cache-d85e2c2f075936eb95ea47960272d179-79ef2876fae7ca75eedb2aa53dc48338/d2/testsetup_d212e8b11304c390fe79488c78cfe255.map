@@ -1,1 +1,0 @@
-{"file":"C:\\Users\\Admin\\Desktop\\React Native\\PokeListTestPract\\test-setup.ts","mappings":";;AAAA,qCAAmC;AACnC,uBAAqB","names":[],"sources":["C:\\Users\\Admin\\Desktop\\React Native\\PokeListTestPract\\test-setup.ts"],"sourcesContent":["import '@testing-library/jest-dom';\r\nimport 'jest-enzyme';\r\n"],"version":3}

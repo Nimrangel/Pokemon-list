@@ -1,8 +1,8 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../pages/BoilerplatePages/HomeScreen";
-import DetailsScreen from "../pages/details/DetailScreen";
+import HomePage from "../pages/BoilerplatePages/ComponentView";
+import DetailsScreen from "../pages/BoilerplatePages/details/DetailsScreen";
 
 type RootStackParam = {
   Home: undefined;
@@ -17,7 +17,7 @@ const Navigation: React.FC = () => {
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
-          component={HomeScreen}
+          component={HomePage}
           options={{
             title: "PokeList",
             headerStyle: { backgroundColor: "black" },
