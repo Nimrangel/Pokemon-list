@@ -29,6 +29,7 @@ class HomeComponent extends HomeController<HomeComponentProps> {
       <TouchableOpacity
         style={styles.item}
         onPress={() => navigation.navigate("Detail", { pokemonUrl: item.url })}
+        
       >
         <Image source={{ uri: item.imageUrl }} style={styles.pokemonImage} />
         <View style={styles.pokemonInfo}>

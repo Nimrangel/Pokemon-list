@@ -1,4 +1,3 @@
-// ComponentController.tsx
 import React from "react";
 
 interface Pokemon {
@@ -75,13 +74,12 @@ export default abstract class HomeController<T> extends React.Component<
   };
 
   handleLoadMore = () => {
-    if (!this.state.loadingMore) {
-      const newOffset = this.state.offset + limit;
-      this.setState({ offset: newOffset }, () => {
-        this.fetchPokemonData(newOffset);
-      });
-    }
-  };
+    if (this.state.loadingMore) return;
+    this.setState({ loadingMore: true, offset: this.state.offset + 20 }, () => {
+      this.fetchPokemonData(this.state.offset);
+    });
+  }
+  
 
   handleSearch = (text: string) => {
     this.setState({ searchQuery: text });
